@@ -46,3 +46,31 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
+```
+src/views/map/modules/
+├── index.ts                    # 统一导出入口
+├── types.ts                    # 所有类型和接口定义
+├── constants.ts                # 常量配置（中心点、范围、转换规则）
+│
+├── layers/                     # 📁 图层相关（创建、样式、管理）
+│   ├── index.ts               # 图层统一导出
+│   ├── boundary.ts            # 边界图层（国界、省界线）
+│   ├── region.ts              # 区域填充图层（省/市/区）
+│   └── styles.ts              # 样式定义（集中管理所有Style）
+│
+├── interactions/               # 📁 交互事件（用户操作响应）
+│   ├── index.ts               # 交互统一导出
+│   ├── hover.ts               # 鼠标悬停（pointermove）
+│   ├── click.ts               # 单击事件（下钻/上卷核心逻辑）
+│   └── navigation.ts          # 导航辅助（视图调整、拖动处理）
+│
+├── services/                   # 📁 业务服务（数据处理、查询）
+│   ├── index.ts               # 服务统一导出
+│   ├── drill.ts               # 下钻/上钻业务逻辑
+│   ├── query.ts               # Feature查询工具
+│   └── geometry.ts            # 几何计算（顶点、坐标转换）
+│
+└── components/
+└── MapPopup.vue           # UI组件保持不变
+```

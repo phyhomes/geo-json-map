@@ -1,5 +1,5 @@
 /**
- * @Project : vue-map-test
+ * @Project : geo-json-map
  * @Time    : 2026-05-28 17:21:48
  * @Author  : ZZQ
  * @Desc    : 组件类型定义模块
@@ -11,3 +11,6 @@ export interface PopupData {
   adcode: string
   level: string
 }
+
+// 行政级别类型 国 省 市 县
+export type MapLevel = 'nation' | 'province' | 'city' | 'county'

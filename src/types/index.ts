@@ -1,5 +1,5 @@
 /**
- * @Project : vue-map-test
+ * @Project : geo-json-map
  * @Time    : 2026-05-28 17:22:11
  * @Author  : ZZQ
  * @Desc    : 类型定义统一导出模块
